@@ -144,7 +144,6 @@ class _AnimateIconsState extends State<AnimateIcons>
     }
 
     return Stack(
-      alignment: Alignment.center,
       children: [
         x == 1 && y == 0 ? second() : first(),
         x == 0 && y == 1 ? first() : second(),
