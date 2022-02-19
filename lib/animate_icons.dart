@@ -66,7 +66,7 @@ class _AnimateIconsState extends State<AnimateIcons>
   void initState() {
     this._controller = new AnimationController(
       vsync: this,
-      duration: widget.duration ?? Duration(seconds: 1),
+      duration: const Duration(milliseconds: 500),
       lowerBound: 0.0,
       upperBound: 1.0,
     );
