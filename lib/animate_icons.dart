@@ -146,20 +146,17 @@ class _AnimateIconsState extends State<AnimateIcons>
       final icon = Icon(widget.endIcon);
       return Transform.rotate(
         angle: widget.clockwise ?? false ? -angleY : angleY,
-        child: Opacity(
-          opacity: x,
-          child: IconButton(
-            iconSize: widget.size ?? 24.0,
-            color: widget.endIconColor ?? Theme.of(context).primaryColor,
-            disabledColor: Colors.grey.shade500,
-            icon: widget.endTooltip == null
-                ? icon
-                : Tooltip(
-                    message: widget.endTooltip!,
-                    child: icon,
-                  ),
-            onPressed: _onEndIconPress,
-          ),
+        child: IconButton(
+          iconSize: widget.size ?? 24.0,
+          color: widget.endIconColor ?? Theme.of(context).primaryColor,
+          disabledColor: Colors.grey.shade500,
+          icon: widget.endTooltip == null
+              ? icon
+              : Tooltip(
+                  message: widget.endTooltip!,
+                  child: icon,
+                ),
+          onPressed: _onEndIconPress,
         ),
       );
     }
