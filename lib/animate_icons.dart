@@ -143,10 +143,16 @@ class _AnimateIconsState extends State<AnimateIcons>
       );
     }
 
-    return Stack(
-      children: [
-        x == 1 && y == 0 ? second() : first(),
-      ],
+    return Container(
+      constraints: BoxConstraints(
+        maxWidth: 25,
+        maxHeight: 25,
+      ),
+      child: Stack(
+        children: [
+          x == 1 && y == 0 ? second() : first(),
+        ],
+      ),
     );
   }
 }
