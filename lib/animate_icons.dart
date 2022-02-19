@@ -124,6 +124,7 @@ class _AnimateIconsState extends State<AnimateIcons>
     Widget first() {
       final icon = Icon(widget.startIcon, size: widget.size);
       return IconButton(
+        padding: EdgeInsets.zero,
         iconSize: widget.size ?? 24.0,
         color: widget.startIconColor ?? Theme.of(context).primaryColor,
         disabledColor: Colors.grey.shade500,
@@ -135,6 +136,7 @@ class _AnimateIconsState extends State<AnimateIcons>
     Widget second() {
       final icon = Icon(widget.endIcon);
       return IconButton(
+        padding: EdgeInsets.zero,
         iconSize: widget.size ?? 24.0,
         color: widget.endIconColor ?? Theme.of(context).primaryColor,
         disabledColor: Colors.grey.shade500,
