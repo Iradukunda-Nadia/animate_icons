@@ -125,8 +125,7 @@ class _AnimateIconsState extends State<AnimateIcons>
       final icon = Icon(widget.startIcon, size: widget.size);
       return Transform.rotate(
         angle: widget.clockwise ?? false ? angleX : -angleX,
-        child: Opacity(
-          opacity: y,
+        child: Center(
           child: IconButton(
             iconSize: widget.size ?? 24.0,
             color: widget.startIconColor ?? Theme.of(context).primaryColor,
